@@ -1,4 +1,4 @@
-#add three numbers stored in array
+#add three numbers stored in array 
 .data
 	my_array: .word 10,20,30
 	size: .word 3
