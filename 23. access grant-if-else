@@ -1,0 +1,43 @@
+.data
+	u_name: .asciiz "Enter username : "
+	pw: .asciiz "Enter password : "
+	granted: .asciiz "Access Granted"
+	not_granted: .asciiz "Incorrect Password"
+	
+.text
+	li $v0,4
+	la $a0,u_name
+	syscall
+	
+	li $v0,5	#input string $v0,8
+	syscall
+	
+	move $t1,$v0
+	
+	li $v0,4
+	la $a0,pw
+	syscall
+	
+	li $v0,5
+	syscall
+	
+	move $t1,$v0
+	
+	beq $t1,2026,grant
+	
+	li $v0,4
+	la $a0,not_granted
+	syscall
+	
+	j exit
+	
+grant:
+	li $v0,4
+	la $a0,granted
+	syscall
+	
+	j exit
+	
+exit:
+	li $v0,10
+	syscall
