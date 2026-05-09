@@ -5,7 +5,7 @@
 * **Q3. Division and Remainders:** Prompt for a dividend and a divisor. Perform the division and print the quotient specifically by moving it from the `LO` register.
 * **Q4. Float Conversion:** Prompt for a Celsius value (float). Convert it to Fahrenheit using $F = (C \times 1.8) + 32.0$ and print the result using floating-point registers.
 
----
+----
 
 ## **Topic 2: Conditional Branching (If-Else)**
 
